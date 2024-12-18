@@ -6,9 +6,16 @@
 <body style="text-align: center; margin-top: 20%;">
   <h1 style="color: green;">🎉 CONGRATULATIONS!!! 🎉</h1>
   
-  <!-- Audio Player -->
-  <audio autoplay>
-    <source src="gong-bell-129820.mp3" type="audio/mp3">
-  </audio>
+  <!-- Audio Playback -->
+  <audio id="gongSound" src="gong-bell-129820.mp3"></audio>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const audio = document.getElementById('gongSound');
+      audio.play().catch(function(error) {
+        console.log("Autoplay failed:", error);
+      });
+    });
+  </script>
 </body>
 </html>
