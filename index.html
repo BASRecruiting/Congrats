@@ -7,13 +7,13 @@
   <h1 style="color: green;">🎉 CONGRATULATIONS!!! 🎉</h1>
   
   <!-- Audio Playback -->
-  <audio id="gongSound" src="gong-bell-129820.mp3"></audio>
-  
+  <audio id="gongSound" src="gong-bell-129820.mp3" autoplay></audio>
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const audio = document.getElementById('gongSound');
       audio.play().catch(function(error) {
-        console.log("Autoplay failed:", error);
+        console.log("Autoplay failed, likely blocked by browser:", error);
       });
     });
   </script>
